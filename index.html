@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigbur CodeSolutions - Website im Aufbau</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0056b3; /* Dunkleres Blau */
+            --secondary-color: #007bff; /* Helles Blau */
+            --accent-color: #28a745; /* Grün für Aktionen */
+            --text-dark: #343a40;
+            --text-light: #f8f9fa;
+            --bg-light: #e9ecef;
+            --bg-dark: #212529;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-light), #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden; /* Verhindert Scrollbalken durch Animation */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            opacity: 0; /* Für Fade-In Animation */
+            transform: translateY(20px); /* Für Slide-Up Animation */
+            animation: fadeInSlideUp 1s forwards ease-out;
+            position: relative; /* Für Überlagerungen wie den Footer */
+        }
+
+        @keyframes fadeInSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header h1 span {
+            color: var(--secondary-color);
+        }
+
+        main p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+
+        .status-message {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-family: var(--font-heading);
+            font-weight: 400;
+            font-size: 1.3em;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-info {
+            margin-top: 35px;
+            font-size: 1em;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text
