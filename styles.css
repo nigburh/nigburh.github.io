@@ -1,0 +1,180 @@
+   :root {
+            --primary-color: #0056b3; /* Dunkleres Blau für Hauptakzente */
+            --secondary-color: #007bff; /* Helles Blau für Links/Highlights */
+            --accent-color: #28a745; /* Grün für positive Aktionen */
+            --text-dark: #343a40; /* Dunkler Text */
+            --text-light: #f8f9fa; /* Heller Text */
+            --bg-light: #e9ecef; /* Heller Hintergrund */
+            --bg-dark: #212529; /* Dunkler Hintergrund */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-light), #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden; /* Verhindert horizontales Scrollen */
+            position: relative; /* Für den Footer */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 900px; /* Breiterer Container für mehr Inhalt und Bild */
+            width: 90%;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 1s forwards ease-out;
+            box-sizing: border-box; /* Padding wird in die Breite eingerechnet */
+        }
+
+        @keyframes fadeInSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header h1 span {
+            color: var(--secondary-color);
+        }
+
+        .main-content {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .main-content h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+         .main-content ul {
+            list-style-type: square; 
+            padding-left: 0; 
+            text-align: left; 
+            width: fit-content; 
+            margin: 20px auto; 
+        }
+
+        .main-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .image-section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            object-fit: cover; /* Bildausschnitt anpassen */
+        }
+
+        .status-message {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-family: var(--font-heading);
+            font-weight: 400;
+            font-size: 1.3em;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 30px; /* Abstand zum folgenden Text */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-info {
+            margin-top: 35px; /* Abstand zum vorigen Block */
+            font-size: 1em;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 40px;
+            }
+            header h1 {
+                font-size: 2.2em;
+            }
+            .main-content p, .main-content ul li {
+                font-size: 1em;
+            }
+            .main-content h2 {
+                font-size: 1.6em;
+            }
+            .status-message {
+                font-size: 1.1em;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 25px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            .main-content p, .main-content ul li {
+                font-size: 0.9em;
+            }
+            .main-content h2 {
+                font-size: 1.4em;
+            }
+            .status-message {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+        }
