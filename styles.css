@@ -1,10 +1,10 @@
    :root {
-            --primary-color: #0056b3; /* Dunkleres Blau für Hauptakzente */
-            --secondary-color: #007bff; /* Helles Blau für Links/Highlights */
+            --primary-color: #024791; /* Dunkleres Blau für Hauptakzente */
+            --secondary-color: #5326bd; /* Helles Lila für sekundäre Akzente */
             --accent-color: #28a745; /* Grün für positive Aktionen */
             --text-dark: #343a40; /* Dunkler Text */
             --text-light: #f8f9fa; /* Heller Text */
-            --bg-light: #e9ecef; /* Heller Hintergrund */
+            --bg-light: #b7d6f5; /* Heller Hintergrund */
             --bg-dark: #212529; /* Dunkler Hintergrund */
             --font-heading: 'Montserrat', sans-serif;
             --font-body: 'Roboto', sans-serif;
@@ -20,8 +20,8 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            overflow-x: hidden; /* Verhindert horizontales Scrollen */
-            position: relative; /* Für den Footer */
+            overflow-x: hidden;
+            position: relative;
         }
 
         .container {
@@ -129,7 +129,7 @@
             transition: color 0.3s ease;
         }
 
-        .contact-info a:hover {
+        a:hover {
             color: var(--primary-color);
             text-decoration: underline;
         }
